@@ -4,6 +4,7 @@ import { Section } from '../types/news';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import MediaCarousel from '../components/MediaCarousel';
+import ScrollToTop from '../components/ScrollToTop';
 
 export default function Home() {
   const [currentSection, setCurrentSection] = useState<Section | null>(null);
@@ -24,7 +25,7 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50">
       <Header currentSection={currentSection} onSectionChange={setCurrentSection} />
 
-      <main className="max-w-7xl mx-auto px-4 py-8">
+      <main className="max-w-7xl mx-auto px-4 py-8 transition-opacity duration-300">
         {hero && (
           <section className="mb-8">
             <article className="bg-white rounded-lg shadow-lg overflow-hidden">
@@ -219,6 +220,7 @@ export default function Home() {
         )}
       </main>
 
+      <ScrollToTop />
       <Footer />
     </div>
   );
