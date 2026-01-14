@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Section } from '../types/news';
+import escudo from '../assets/escudo.jpg';
 
 interface HeaderProps {
   currentSection: Section | null;
@@ -27,7 +28,7 @@ export default function Header({ currentSection, onSectionChange }: HeaderProps)
       <div className="px-4 flex items-center justify-between h-20">
         <div className="flex items-center gap-3">
           <img 
-            src="/Escudo Escuela Simeon Payba.jpeg" 
+            src={escudo} 
             alt="Logo Institución" 
             className="w-20 h-20 object-contain rounded-full"
           />

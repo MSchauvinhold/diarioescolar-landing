@@ -57,7 +57,7 @@ export default function Home() {
           <section className="grid md:grid-cols-2 gap-6 mb-8">
             {secondary1 && (
               <article className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="h-56">
+                <div className="h-80">
                   <MediaCarousel media={secondary1.media} alt={secondary1.title} />
                 </div>
                 <div className="p-4">
@@ -78,7 +78,7 @@ export default function Home() {
             )}
             {secondary2 && (
               <article className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="h-56">
+                <div className="h-80">
                   <MediaCarousel media={secondary2.media} alt={secondary2.title} />
                 </div>
                 <div className="p-4">
@@ -104,7 +104,7 @@ export default function Home() {
           <section className="grid md:grid-cols-2 gap-6 mb-8">
             {editorial1 && (
               <article className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="h-48">
+                <div className="h-64">
                   <MediaCarousel media={editorial1.media} alt={editorial1.title} />
                 </div>
                 <div className="p-6">
@@ -155,7 +155,7 @@ export default function Home() {
         {additional1 && (
           <section className="grid md:grid-cols-3 gap-6">
             <article className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="h-48">
+              <div className="h-64">
                 <MediaCarousel media={additional1.media} alt={additional1.title} />
               </div>
               <div className="p-4">
@@ -175,7 +175,7 @@ export default function Home() {
             </article>
             {additional2 && (
               <article className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="h-48">
+                <div className="h-64">
                   <MediaCarousel media={additional2.media} alt={additional2.title} />
                 </div>
                 <div className="p-4">
@@ -196,7 +196,7 @@ export default function Home() {
             )}
             {additional3 && (
               <article className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="h-48">
+                <div className="h-64">
                   <MediaCarousel media={additional3.media} alt={additional3.title} />
                 </div>
                 <div className="p-4">

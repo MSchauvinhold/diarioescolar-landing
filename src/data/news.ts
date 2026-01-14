@@ -6,7 +6,7 @@ export const news: News[] = [
     title: 'Comenzo el ciclo lectivo 2026',
     summary: 'La escuela dio inicio al nuevo ciclo lectivo con una ceremonia de bienvenida para todos los estudiantes y docentes.',
     media: [
-      { type: 'image', url: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800' },
+      { type: 'image', url: 'https://i.imgur.com/mUPEfcY.jpeg' },
       { type: 'image', url: 'https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=800' }
     ],
     section: 'educacion',
