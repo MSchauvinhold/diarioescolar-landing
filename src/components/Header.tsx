@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Section } from '../types/news';
 import escudo from '../assets/escudo.jpg';
+import LiveClock from './LiveClock';
 
 interface HeaderProps {
   currentSection: Section | null;
@@ -24,7 +25,7 @@ export default function Header({ currentSection, onSectionChange }: HeaderProps)
   };
 
   return (
-    <header className="bg-white border-b-2 border-gray-900 sticky top-0 z-50 shadow-md">
+    <header className="bg-white border-b-2 border-gray-900 sticky top-0 z-50 shadow-lg">
       <div className="px-4 flex items-center justify-between h-20">
         <div className="flex items-center gap-3">
           <img 
@@ -32,12 +33,15 @@ export default function Header({ currentSection, onSectionChange }: HeaderProps)
             alt="Logo Institución" 
             className="w-20 h-20 object-contain rounded-full"
           />
-          <span className="hidden md:inline text-lg font-bold text-gray-900">Escuela Nº 227 "Cnel Simeón Payba"</span>
-          <span className="md:hidden text-lg font-serif italic text-gray-700">Diario Escolar</span>
+          <div>
+            <span className="hidden md:inline text-lg font-bold text-gray-900">Escuela Nº 227 "Cnel Simeón Payba"</span>
+            <span className="md:hidden text-lg font-serif italic text-gray-700">Diario Escolar</span>
+          </div>
         </div>
 
-        <div className="hidden md:block">
-          <h1 className="text-2xl font-serif italic text-gray-700">Diario Escolar</h1>
+        <div className="flex flex-col items-center">
+          <h1 className="text-2xl font-serif italic text-gray-700 hidden md:block">Diario Escolar</h1>
+          <LiveClock />
         </div>
 
         <nav className="hidden md:flex items-center gap-1">
@@ -45,9 +49,9 @@ export default function Header({ currentSection, onSectionChange }: HeaderProps)
             <button
               key={section.label}
               onClick={() => handleSectionClick(section.key)}
-              className={`px-4 py-2 text-sm font-semibold uppercase transition ${
+              className={`px-4 py-2 text-sm font-semibold uppercase transition relative ${
                 currentSection === section.key
-                  ? 'bg-gray-900 text-white'
+                  ? 'bg-gray-900/10 text-gray-900 shadow-inner'
                   : 'text-gray-700 hover:bg-gray-100'
               }`}
             >
@@ -78,7 +82,7 @@ export default function Header({ currentSection, onSectionChange }: HeaderProps)
               onClick={() => handleSectionClick(section.key)}
               className={`block w-full text-left px-4 py-3 text-sm font-semibold uppercase ${
                 currentSection === section.key
-                  ? 'bg-gray-900 text-white'
+                  ? 'bg-gray-900/10 text-gray-900 shadow-inner'
                   : 'text-gray-700 hover:bg-gray-100'
               }`}
             >

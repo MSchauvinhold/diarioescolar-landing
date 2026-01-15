@@ -20,11 +20,15 @@ export default function MediaCarousel({ media, alt }: MediaCarouselProps) {
 
   const hasMultiple = media.length > 1;
 
-  const next = () => {
+  const next = (e?: React.MouseEvent) => {
+    e?.preventDefault();
+    e?.stopPropagation();
     setIsLoading(true);
     setCurrentIndex((i) => (i + 1) % media.length);
   };
-  const prev = () => {
+  const prev = (e?: React.MouseEvent) => {
+    e?.preventDefault();
+    e?.stopPropagation();
     setIsLoading(true);
     setCurrentIndex((i) => (i - 1 + media.length) % media.length);
   };
@@ -62,14 +66,14 @@ export default function MediaCarousel({ media, alt }: MediaCarouselProps) {
       {hasMultiple && (
         <>
           <button
-            onClick={prev}
-            className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition"
+            onClick={(e) => prev(e)}
+            className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition z-10"
           >
             ←
           </button>
           <button
-            onClick={next}
-            className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition"
+            onClick={(e) => next(e)}
+            className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition z-10"
           >
             →
           </button>

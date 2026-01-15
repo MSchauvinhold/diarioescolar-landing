@@ -1,226 +1,138 @@
-import { useState } from 'react';
-import { news } from '../data/news';
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Section } from '../types/news';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import MediaCarousel from '../components/MediaCarousel';
 import ScrollToTop from '../components/ScrollToTop';
+import Pagination from '../components/Pagination';
+import Sidebar from '../components/Sidebar';
+import MobileSidebarButton from '../components/MobileSidebarButton';
+import ArticleHero from '../components/articles/ArticleHero';
+import ArticleSecondary from '../components/articles/ArticleSecondary';
+import ArticleEditorial from '../components/articles/ArticleEditorial';
+import ArticleSmall from '../components/articles/ArticleSmall';
+import { useNews } from '../hooks/useNews';
+import { usePagination } from '../hooks/usePagination';
+import { mapNewsToSlots } from '../utils/mapNewsToSlots';
+import { usePageTitle } from '../hooks/usePageTitle';
+
+const SECTION_NAMES: Record<Section, string> = {
+  educacion: 'Educación',
+  deportes: 'Deportes',
+  institucional: 'Institucional',
+  comunidad: 'Comunidad',
+};
 
 export default function Home() {
   const [currentSection, setCurrentSection] = useState<Section | null>(null);
+  const navigate = useNavigate();
+  const { latestNews } = useNews(currentSection);
+  const isHomePage = currentSection === null;
+  const slots = isHomePage ? mapNewsToSlots(latestNews) : null;
 
-  const filteredNews = currentSection
-    ? news.filter((n) => n.section === currentSection)
-    : news;
+  const pageTitle = currentSection
+    ? `${SECTION_NAMES[currentSection]} - Diario Escolar`
+    : 'Diario Escolar - Escuela Nº 227 "Cnel Simeón Payba"';
+  
+  usePageTitle(pageTitle);
 
-  const sortedNews = [...filteredNews].sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-  );
+  const handleSectionChange = (section: Section | null) => {
+    setCurrentSection(section);
+    navigate('/');
+  };
 
-  const latestNews = currentSection ? sortedNews : sortedNews.slice(0, 8);
+  const filteredForSection = isHomePage ? latestNews.slice(1) : latestNews.slice(1);
+  const pagination = usePagination(filteredForSection);
 
-  const [hero, secondary1, secondary2, editorial1, editorial2, additional1, additional2, additional3] = latestNews;
+  useEffect(() => {
+    pagination.goToPage(1);
+  }, [currentSection]);
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Header currentSection={currentSection} onSectionChange={setCurrentSection} />
+      <Header currentSection={currentSection} onSectionChange={handleSectionChange} />
 
-      <main className="max-w-7xl mx-auto px-4 py-8 transition-opacity duration-300">
-        {hero && (
-          <section className="mb-8">
-            <article className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="h-96">
-                <MediaCarousel media={hero.media} alt={hero.title} />
+      <main className="max-w-[1400px] mx-auto px-4 py-8 fade-in">
+        <div className="flex gap-6">
+          <div className="flex-1">
+            {latestNews.length === 0 ? (
+              <div className="text-center py-16">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">No hay noticias disponibles</h2>
+                <p className="text-gray-600">Aún no se han publicado noticias en esta sección.</p>
               </div>
-              <div className="p-6">
-                <span className="text-xs font-semibold text-blue-600 uppercase">
-                  {hero.section}
-                </span>
-                <h2 className="text-4xl font-bold mt-2 text-gray-900">
-                  {hero.title}
-                </h2>
-                <p className="text-gray-600 mt-4 text-lg">
-                  {hero.summary}
-                </p>
-                <time className="text-sm text-gray-500 mt-4 block">
-                  {new Date(hero.date).toLocaleDateString('es-AR', {
-                    day: 'numeric',
-                    month: 'long',
-                    year: 'numeric',
-                  })}
-                </time>
-              </div>
-            </article>
-          </section>
-        )}
+            ) : isHomePage ? (
+          slots && (
+            <>
+              {slots.hero && (
+                <section className="mb-8">
+                  <ArticleHero news={slots.hero} />
+                </section>
+              )}
 
-        {(secondary1 || secondary2) && (
-          <section className="grid md:grid-cols-2 gap-6 mb-8">
-            {secondary1 && (
-              <article className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="h-80">
-                  <MediaCarousel media={secondary1.media} alt={secondary1.title} />
-                </div>
-                <div className="p-4">
-                  <span className="text-xs font-semibold text-blue-600 uppercase">
-                    {secondary1.section}
-                  </span>
-                  <h3 className="text-2xl font-bold mt-2 text-gray-900">
-                    {secondary1.title}
-                  </h3>
-                  <p className="text-gray-600 mt-2 text-sm">
-                    {secondary1.summary}
-                  </p>
-                  <time className="text-xs text-gray-500 mt-3 block">
-                    {new Date(secondary1.date).toLocaleDateString('es-AR')}
-                  </time>
-                </div>
-              </article>
-            )}
-            {secondary2 && (
-              <article className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="h-80">
-                  <MediaCarousel media={secondary2.media} alt={secondary2.title} />
-                </div>
-                <div className="p-4">
-                  <span className="text-xs font-semibold text-blue-600 uppercase">
-                    {secondary2.section}
-                  </span>
-                  <h3 className="text-2xl font-bold mt-2 text-gray-900">
-                    {secondary2.title}
-                  </h3>
-                  <p className="text-gray-600 mt-2 text-sm">
-                    {secondary2.summary}
-                  </p>
-                  <time className="text-xs text-gray-500 mt-3 block">
-                    {new Date(secondary2.date).toLocaleDateString('es-AR')}
-                  </time>
-                </div>
-              </article>
-            )}
-          </section>
-        )}
+              {slots.secondary.length > 0 && (
+                <section className="grid md:grid-cols-2 gap-5 mb-8">
+                  {slots.secondary.map((news) => (
+                    <ArticleSecondary key={news.id} news={news} />
+                  ))}
+                </section>
+              )}
 
-        {(editorial1 || editorial2) && (
-          <section className="grid md:grid-cols-2 gap-6 mb-8">
-            {editorial1 && (
-              <article className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="h-64">
-                  <MediaCarousel media={editorial1.media} alt={editorial1.title} />
-                </div>
-                <div className="p-6">
-                  <span className="text-xs font-semibold text-blue-600 uppercase">
-                    {editorial1.section}
-                  </span>
-                  <h3 className="text-2xl font-bold mt-2 text-gray-900">
-                    {editorial1.title}
-                  </h3>
-                  {editorial1.subtitle && (
-                    <h4 className="text-lg text-gray-700 mt-1 font-medium">
-                      {editorial1.subtitle}
-                    </h4>
-                  )}
-                  <p className="text-gray-600 mt-4 leading-relaxed">
-                    {editorial1.summary}
-                  </p>
-                  <time className="text-xs text-gray-500 mt-4 block">
-                    {new Date(editorial1.date).toLocaleDateString('es-AR')}
-                  </time>
-                </div>
-              </article>
-            )}
-            {editorial2 && (
-              <article className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="h-64">
-                  <MediaCarousel media={editorial2.media} alt={editorial2.title} />
-                </div>
-                <div className="p-4">
-                  <span className="text-xs font-semibold text-blue-600 uppercase">
-                    {editorial2.section}
-                  </span>
-                  <h3 className="text-2xl font-bold mt-2 text-gray-900">
-                    {editorial2.title}
-                  </h3>
-                  <p className="text-gray-600 mt-2 text-sm">
-                    {editorial2.summary}
-                  </p>
-                  <time className="text-xs text-gray-500 mt-3 block">
-                    {new Date(editorial2.date).toLocaleDateString('es-AR')}
-                  </time>
-                </div>
-              </article>
-            )}
-          </section>
-        )}
+              {slots.editorial.length > 0 && (
+                <section className="grid md:grid-cols-2 gap-5 mb-8">
+                  {slots.editorial.map((news) => (
+                    <ArticleEditorial key={news.id} news={news} />
+                  ))}
+                </section>
+              )}
 
-        {additional1 && (
-          <section className="grid md:grid-cols-3 gap-6">
-            <article className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="h-64">
-                <MediaCarousel media={additional1.media} alt={additional1.title} />
-              </div>
-              <div className="p-4">
-                <span className="text-xs font-semibold text-blue-600 uppercase">
-                  {additional1.section}
-                </span>
-                <h3 className="text-xl font-bold mt-2 text-gray-900">
-                  {additional1.title}
-                </h3>
-                <p className="text-gray-600 mt-2 text-sm">
-                  {additional1.summary}
-                </p>
-                <time className="text-xs text-gray-500 mt-3 block">
-                  {new Date(additional1.date).toLocaleDateString('es-AR')}
-                </time>
-              </div>
-            </article>
-            {additional2 && (
-              <article className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="h-64">
-                  <MediaCarousel media={additional2.media} alt={additional2.title} />
-                </div>
-                <div className="p-4">
-                  <span className="text-xs font-semibold text-blue-600 uppercase">
-                    {additional2.section}
-                  </span>
-                  <h3 className="text-xl font-bold mt-2 text-gray-900">
-                    {additional2.title}
-                  </h3>
-                  <p className="text-gray-600 mt-2 text-sm">
-                    {additional2.summary}
-                  </p>
-                  <time className="text-xs text-gray-500 mt-3 block">
-                    {new Date(additional2.date).toLocaleDateString('es-AR')}
-                  </time>
-                </div>
-              </article>
+              {slots.additional.length > 0 && (
+                <section className="grid md:grid-cols-3 gap-5">
+                  {slots.additional.map((news) => (
+                    <ArticleSmall key={news.id} news={news} />
+                  ))}
+                </section>
+              )}
+            </>
+          )
+        ) : (
+          <>
+            {latestNews[0] && (
+              <section className="mb-8">
+                <ArticleHero news={latestNews[0]} />
+              </section>
             )}
-            {additional3 && (
-              <article className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="h-64">
-                  <MediaCarousel media={additional3.media} alt={additional3.title} />
-                </div>
-                <div className="p-4">
-                  <span className="text-xs font-semibold text-blue-600 uppercase">
-                    {additional3.section}
-                  </span>
-                  <h3 className="text-xl font-bold mt-2 text-gray-900">
-                    {additional3.title}
-                  </h3>
-                  <p className="text-gray-600 mt-2 text-sm">
-                    {additional3.summary}
-                  </p>
-                  <time className="text-xs text-gray-500 mt-3 block">
-                    {new Date(additional3.date).toLocaleDateString('es-AR')}
-                  </time>
-                </div>
-              </article>
+            {pagination.items.length > 0 && (
+              <>
+                <section className="grid md:grid-cols-3 gap-5">
+                  {pagination.items.map((news) => (
+                    <ArticleSmall key={news.id} news={news} />
+                  ))}
+                </section>
+                <Pagination
+                  currentPage={pagination.currentPage}
+                  totalPages={pagination.totalPages}
+                  hasNext={pagination.hasNext}
+                  hasPrev={pagination.hasPrev}
+                  onNext={pagination.nextPage}
+                  onPrev={pagination.prevPage}
+                  onGoTo={pagination.goToPage}
+                />
+              </>
             )}
-          </section>
+          </>
         )}
+          </div>
+
+          <div className="hidden lg:block w-72 flex-shrink-0">
+            <div className="sticky top-28">
+              <Sidebar />
+            </div>
+          </div>
+        </div>
       </main>
 
       <ScrollToTop />
+      <MobileSidebarButton />
       <Footer />
     </div>
   );
