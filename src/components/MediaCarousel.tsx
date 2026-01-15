@@ -12,7 +12,6 @@ export default function MediaCarousel({ media, alt }: MediaCarouselProps) {
 
   useEffect(() => {
     setCurrentIndex(0);
-    setIsLoading(true);
   }, [media]);
 
   if (!media || media.length === 0) {
@@ -21,8 +20,14 @@ export default function MediaCarousel({ media, alt }: MediaCarouselProps) {
 
   const hasMultiple = media.length > 1;
 
-  const next = () => setCurrentIndex((i) => (i + 1) % media.length);
-  const prev = () => setCurrentIndex((i) => (i - 1 + media.length) % media.length);
+  const next = () => {
+    setIsLoading(true);
+    setCurrentIndex((i) => (i + 1) % media.length);
+  };
+  const prev = () => {
+    setIsLoading(true);
+    setCurrentIndex((i) => (i - 1 + media.length) % media.length);
+  };
 
   const current = media[currentIndex];
 
