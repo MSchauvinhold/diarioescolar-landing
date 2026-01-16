@@ -16,7 +16,8 @@ export default function Sidebar() {
   const upcomingEvents = futureEvents.filter(e => e.type === 'upcoming').slice(0, 4);
 
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
+    const [year, month, day] = dateString.split('-').map(Number);
+    const date = new Date(year, month - 1, day);
     return date.toLocaleDateString('es-AR', { day: 'numeric', month: 'short' });
   };
 
