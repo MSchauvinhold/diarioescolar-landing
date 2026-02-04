@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 import MediaCarousel from '../components/MediaCarousel';
-import { getRelativeDate } from '../utils/dateUtils';
+import { getFullDateWithRelative } from '../utils/dateUtils';
 import { usePageTitle } from '../hooks/usePageTitle';
 
 export default function NewsDetail() {
@@ -13,8 +13,8 @@ export default function NewsDetail() {
 
   usePageTitle(
     article 
-      ? `${article.title} - Diario Escolar` 
-      : 'Noticia no encontrada - Diario Escolar'
+      ? `${article.title} - Escuela Nº 227 "Cnel Simeón Payba"` 
+      : 'Noticia no encontrada - Escuela Nº 227 "Cnel Simeón Payba"'
   );
 
   if (!article) {
@@ -63,7 +63,7 @@ export default function NewsDetail() {
             )}
 
             <time className="text-sm text-gray-500 mt-4 block">
-              {getRelativeDate(article.date)}
+              {getFullDateWithRelative(article.date)}
             </time>
 
             <div className="mt-8 text-gray-800 text-lg leading-relaxed">

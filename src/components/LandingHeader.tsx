@@ -1,26 +1,22 @@
 import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Section } from '../types/news';
+import { Link } from 'react-router-dom';
 import escudo from '../assets/escudo.jpg';
 import LiveClock from './LiveClock';
 
-interface HeaderProps {
-  currentSection?: Section | null;
-  onSectionChange?: (section: Section | null) => void;
-}
-
-export default function Header({ }: HeaderProps) {
+export default function LandingHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const location = useLocation();
-  const isActive = (path: string) => location.pathname === path;
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
   const sections = [
-    { path: '/', label: 'Inicio' },
-    { path: '/institucional', label: 'Institucional' },
-    { path: '/comunidad', label: 'Comunidad' },
-    { path: '/pedagogico', label: 'Pedagógico' },
-    { path: '/administrativo', label: 'Administrativo' },
+    { id: 'institucion', label: 'Institución' },
+    { id: 'directivos', label: 'Autoridades' },
+    { id: 'personal-docente', label: 'Personal Docente' },
+    { id: 'personal-limpieza', label: 'Personal de Limpieza' },
   ];
 
   return (
@@ -34,6 +30,7 @@ export default function Header({ }: HeaderProps) {
           />
           <div>
             <span className="hidden md:inline text-lg font-bold text-gray-900">Escuela Nº 227 "Cnel Simeón Payba"</span>
+            <span className="md:hidden text-lg font-serif italic text-gray-700">Nuestra Institucion</span>
           </div>
         </div>
 
@@ -43,28 +40,24 @@ export default function Header({ }: HeaderProps) {
 
         <nav className="hidden md:flex items-center gap-1">
           <Link
-            to="/quienes-somos"
-            className="px-4 py-2 text-sm font-semibold uppercase text-gray-700 hover:bg-gray-100 transition"
+            to="/"
+            className="px-4 py-2 text-sm font-semibold uppercase text-gray-700 hover:bg-[#2B6389]/5 transition"
           >
-            Quiénes Somos
+            Inicio
           </Link>
           <div className="w-px h-6 bg-gray-300 mx-2"></div>
           {sections.map((section) => (
-            <Link
-              key={section.path}
-              to={section.path}
-              className={`px-4 py-2 text-sm font-semibold uppercase transition relative ${
-                isActive(section.path)
-                  ? 'bg-[#2B6389]/10 text-[#2B6389] shadow-inner'
-                  : 'text-gray-700 hover:bg-[#2B6389]/5'
-              }`}
+            <button
+              key={section.id}
+              onClick={() => scrollToSection(section.id)}
+              className="px-4 py-2 text-sm font-semibold uppercase text-gray-700 hover:bg-[#2B6389]/5 transition"
             >
               {section.label}
-            </Link>
+            </button>
           ))}
         </nav>
 
-        <button
+        <button 
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           className="md:hidden p-2 text-gray-900"
         >
@@ -81,26 +74,24 @@ export default function Header({ }: HeaderProps) {
       {mobileMenuOpen && (
         <nav className="md:hidden border-t border-gray-200 bg-white">
           <Link
-            to="/quienes-somos"
+            to="/"
             onClick={() => setMobileMenuOpen(false)}
-            className="block px-4 py-3 text-sm font-semibold uppercase text-gray-700 hover:bg-gray-100"
+            className="block px-4 py-3 text-sm font-semibold uppercase text-gray-700 hover:bg-[#2B6389]/5"
           >
-            Quiénes Somos
+            Inicio
           </Link>
           <div className="border-t border-gray-200"></div>
           {sections.map((section) => (
-            <Link
-              key={section.path}
-              to={section.path}
-              onClick={() => setMobileMenuOpen(false)}
-              className={`block px-4 py-3 text-sm font-semibold uppercase ${
-                isActive(section.path)
-                  ? 'bg-[#2B6389]/10 text-[#2B6389]'
-                  : 'text-gray-700 hover:bg-[#2B6389]/5'
-              }`}
+            <button
+              key={section.id}
+              onClick={() => {
+                scrollToSection(section.id);
+                setMobileMenuOpen(false);
+              }}
+              className="block w-full text-left px-4 py-3 text-sm font-semibold uppercase text-gray-700 hover:bg-[#2B6389]/5"
             >
               {section.label}
-            </Link>
+            </button>
           ))}
         </nav>
       )}

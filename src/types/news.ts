@@ -1,8 +1,8 @@
 export type Section =
-  | 'educacion'
-  | 'deportes'
   | 'institucional'
-  | 'comunidad';
+  | 'comunidad'
+  | 'pedagogico'
+  | 'administrativo';
 
 export type MediaType = 'image' | 'video';
 

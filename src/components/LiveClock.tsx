@@ -26,8 +26,11 @@ export default function LiveClock() {
 
   return (
     <div className="text-xs text-gray-600 text-center">
-      <div className="font-semibold capitalize">{formatDate}</div>
-      <div className="font-mono">{formatTime}</div>
+      <div className="capitalize mb-1">{formatDate}</div>
+      <div className="font-bold text-lg text-gray-900 flex items-center justify-center gap-1">
+        <span>•</span>
+        <span>{formatTime}</span>
+      </div>
     </div>
   );
 }

@@ -9,7 +9,7 @@ export const news: News[] = [
       { type: 'image', url: 'https://i.imgur.com/mUPEfcY.jpeg' },
       { type: 'image', url: 'https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=800' }
     ],
-    section: 'educacion',
+    section: 'pedagogico',
     date: '2026-01-10',
   },
   {
@@ -19,7 +19,7 @@ export const news: News[] = [
     media: [
       { type: 'image', url: 'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=800' }
     ],
-    section: 'deportes',
+    section: 'administrativo',
     date: '2026-01-08',
   },
   {
@@ -53,7 +53,7 @@ export const news: News[] = [
       { type: 'image', url: 'https://images.unsplash.com/photo-1529699211952-734e80c4d42b?w=800' },
       { type: 'image', url: 'https://images.unsplash.com/photo-1560174038-da43ac74f01b?w=800' }
     ],
-    section: 'deportes',
+    section: 'administrativo',
     date: '2026-01-15',
   },
   {
@@ -63,7 +63,7 @@ export const news: News[] = [
     media: [
       { type: 'image', url: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800' }
     ],
-    section: 'educacion',
+    section: 'pedagogico',
     date: '2026-01-14',
   },
   {
@@ -76,7 +76,7 @@ export const news: News[] = [
       { type: 'image', url: 'https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=800' },
       { type: 'image', url: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800' }
     ],
-    section: 'educacion',
+    section: 'pedagogico',
     date: '2026-01-18',
   },
   {
@@ -88,7 +88,7 @@ export const news: News[] = [
       { type: 'image', url: 'https://images.unsplash.com/photo-1519766304817-4f37bda74a26?w=800' },
       { type: 'image', url: 'https://images.unsplash.com/photo-1517649763962-0c623066013b?w=800' }
     ],
-    section: 'deportes',
+    section: 'administrativo',
     date: '2026-01-17',
   },
   {
@@ -104,7 +104,7 @@ export const news: News[] = [
     title: 'Maratón solidaria',
     summary: 'Se realizó la maratón anual con participación de toda la comunidad educativa.',
     media: [{ type: 'image', url: 'https://images.unsplash.com/photo-1452626038306-9aae5e071dd3?w=800' }],
-    section: 'deportes',
+    section: 'administrativo',
     date: '2025-12-15',
   },
   {
@@ -120,7 +120,7 @@ export const news: News[] = [
     title: 'Proyecto de huerta escolar',
     summary: 'Los alumnos comenzaron el proyecto de huerta orgánica en el patio de la escuela.',
     media: [{ type: 'image', url: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800' }],
-    section: 'educacion',
+    section: 'pedagogico',
     date: '2025-12-05',
   },
 ];

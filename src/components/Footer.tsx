@@ -6,7 +6,6 @@ export default function Footer() {
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <h3 className="text-xl font-bold mb-4 uppercase">Escuela Nº 227 "Cnel Simeón Payba"</h3>
-              <p className="text-gray-400">Diario Escolar Digital</p>
               <p className="text-gray-400 text-sm mt-2">Informando a nuestra comunidad educativa</p>
             </div>
             <div>
@@ -20,10 +19,11 @@ export default function Footer() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Secciones</h4>
               <ul className="space-y-2 text-gray-400 text-sm">
-                <li>Educacion</li>
-                <li>Deportes</li>
+                <li>Quienes somos</li>
                 <li>Institucional</li>
                 <li>Comunidad</li>
+                <li>Pedagógico</li>
+                <li>Administrativo</li>
               </ul>
             </div>
           </div>
@@ -32,7 +32,7 @@ export default function Footer() {
       <div className="w-full bg-black py-4">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <p className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} Institucion Educativa - Todos los derechos reservados
+            © {new Date().getFullYear()} Institucion Educativa
           </p>
         </div>
       </div>
