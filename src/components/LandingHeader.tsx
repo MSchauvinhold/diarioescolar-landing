@@ -29,7 +29,8 @@ export default function LandingHeader() {
             className="w-16 h-16 object-contain rounded-full"
           />
           <div>
-            <span className="hidden md:inline text-lg font-bold text-gray-900">Escuela Nº 227 "Cnel Simeón Payba"</span>
+            <span className="hidden lg:inline text-lg font-bold text-gray-900">Escuela Nº 227 "Cnel Simeón Payba"</span>
+            <span className="hidden md:inline lg:hidden text-base font-bold text-gray-900">Escuela Nº 227</span>
             <span className="md:hidden text-lg font-serif italic text-gray-700">Nuestra Institucion</span>
           </div>
         </div>

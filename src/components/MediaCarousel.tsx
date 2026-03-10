@@ -50,6 +50,7 @@ export default function MediaCarousel({ media, alt }: MediaCarouselProps) {
         <img 
           src={current.url} 
           alt={alt} 
+          loading="lazy"
           className="w-full h-full object-cover transition-opacity duration-300"
           onLoad={() => setIsLoading(false)}
           style={{ opacity: isLoading ? 0 : 1 }}

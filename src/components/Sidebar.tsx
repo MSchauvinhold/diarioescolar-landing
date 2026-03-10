@@ -1,6 +1,11 @@
 import { events, Event } from '../data/events';
+import ClockCard from './ClockCard';
 
-export default function Sidebar() {
+interface SidebarProps {
+  showClock?: boolean;
+}
+
+export default function Sidebar({ showClock = false }: SidebarProps) {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
@@ -30,7 +35,9 @@ export default function Sidebar() {
 
   return (
     <aside className="space-y-5">
-      <div className="bg-white rounded-lg shadow-md p-5 border-t-4 border-gray-800">
+      {showClock && <ClockCard />}
+      
+      <div className="bg-white rounded-lg shadow-md p-5 border-t-4 border-[#2B6389]">
         <h3 className="text-lg font-bold text-gray-900 mb-4 uppercase tracking-wide">
           Fechas Importantes
         </h3>
@@ -62,7 +69,7 @@ export default function Sidebar() {
         </ul>
       </div>
 
-      <div className="bg-white rounded-lg shadow-md p-5 border-t-4 border-gray-800">
+      <div className="bg-white rounded-lg shadow-md p-5 border-t-4 border-[#2B6389]">
         <h3 className="text-lg font-bold text-gray-900 mb-4 uppercase tracking-wide">
           Próximos Eventos
         </h3>

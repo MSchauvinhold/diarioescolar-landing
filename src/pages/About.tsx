@@ -69,7 +69,7 @@ export default function About() {
           <div className="w-full bg-[#2B6389] text-white py-5 text-center mb-8">
             <h1 className="text-3xl font-bold">Personal Docente</h1>
           </div>
-          <GroupPhotoSection data={personalDocente} showMembers={true} />
+          <GroupPhotoSection data={personalDocente} />
         </section>
 
         {/* Sección Personal de Limpieza */}
@@ -77,7 +77,7 @@ export default function About() {
           <div className="w-full bg-[#2B6389] text-white py-5 text-center mb-8">
             <h1 className="text-3xl font-bold">Personal de Limpieza</h1>
           </div>
-          <GroupPhotoSection data={personalLimpieza} showMembers={true} />
+          <GroupPhotoSection data={personalLimpieza} />
         </section>
       </main>
 

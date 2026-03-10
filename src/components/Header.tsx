@@ -33,11 +33,12 @@ export default function Header({ }: HeaderProps) {
             className="w-16 h-16 object-contain rounded-full"
           />
           <div>
-            <span className="hidden md:inline text-lg font-bold text-gray-900">Escuela Nº 227 "Cnel Simeón Payba"</span>
+            <span className="hidden lg:inline text-lg font-bold text-gray-900">Escuela Nº 227 "Cnel Simeón Payba"</span>
+            <span className="hidden md:inline lg:hidden text-base font-bold text-gray-900">Escuela Nº 227</span>
           </div>
         </div>
 
-        <div className="flex flex-col items-center md:hidden">
+        <div className="flex flex-col items-center lg:hidden">
           <LiveClock />
         </div>
 

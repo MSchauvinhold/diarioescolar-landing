@@ -7,6 +7,7 @@ import MobileSidebarButton from '../components/MobileSidebarButton';
 import ArticleHero from '../components/articles/ArticleHero';
 import ArticleSmall from '../components/articles/ArticleSmall';
 import Pagination from '../components/Pagination';
+import EmptyState from '../components/EmptyState';
 import { useNews } from '../hooks/useNews';
 import { usePagination } from '../hooks/usePagination';
 import { usePageTitle } from '../hooks/usePageTitle';
@@ -24,10 +25,14 @@ export default function Pedagogico() {
     <div className="min-h-screen bg-gray-50">
       <Header />
 
-      <main className="max-w-[1400px] mx-auto px-4 py-8 fade-in">
+      <main className="max-w-[1600px] mx-auto px-4 py-8 fade-in">
         <div className="flex gap-6">
           <div className="flex-1">
-            {latestNews[0] && (
+            {latestNews.length === 0 ? (
+              <EmptyState section="Pedagógico" />
+            ) : (
+              <>
+                {latestNews[0] && (
               <section className="mb-8">
                 <ArticleHero news={latestNews[0]} />
               </section>
@@ -51,11 +56,13 @@ export default function Pedagogico() {
                 />
               </>
             )}
+              </>
+            )}
           </div>
 
           <div className="hidden lg:block w-72 flex-shrink-0">
             <div className="sticky top-28">
-              <Sidebar />
+              <Sidebar showClock={true} />
             </div>
           </div>
         </div>

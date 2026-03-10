@@ -19,4 +19,5 @@ export interface News {
   section: Section;
   date: string;
   subtitle?: string;
+  content?: string;
 }
