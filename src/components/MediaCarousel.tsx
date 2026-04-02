@@ -4,15 +4,21 @@ import { Media } from '../types/news';
 interface MediaCarouselProps {
   media: Media[];
   alt: string;
+  onCaptionChange?: (caption: string | undefined) => void;
+  contain?: boolean;
 }
 
-export default function MediaCarousel({ media, alt }: MediaCarouselProps) {
+export default function MediaCarousel({ media, alt, onCaptionChange, contain = false }: MediaCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     setCurrentIndex(0);
   }, [media]);
+
+  useEffect(() => {
+    onCaptionChange?.(media[currentIndex]?.caption);
+  }, [currentIndex, media]);
 
   if (!media || media.length === 0) {
     return null;
@@ -51,9 +57,9 @@ export default function MediaCarousel({ media, alt }: MediaCarouselProps) {
           src={current.url} 
           alt={alt} 
           loading="lazy"
-          className="w-full h-full object-cover transition-opacity duration-300"
+          className={`w-full transition-opacity duration-300 ${contain ? 'h-auto block' : 'h-full object-cover'}`}
+          style={{ opacity: isLoading ? 0 : 1, objectPosition: current.objectPosition ?? 'top' }}
           onLoad={() => setIsLoading(false)}
-          style={{ opacity: isLoading ? 0 : 1 }}
         />
       ) : (
         <video 

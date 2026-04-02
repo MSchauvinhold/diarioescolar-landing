@@ -5,10 +5,10 @@ export interface GroupPhoto {
 
 export const personalDocente: GroupPhoto = {
   title: 'Personal Docente',
-  image: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1200',
+  image: '/quienes-somos/personal-docente/personal-docente.webp',
 };
 
 export const personalLimpieza: GroupPhoto = {
-  title: 'Personal de Limpieza',
-  image: 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1200',
+  title: 'Personal de Servicio',
+  image: '/quienes-somos/personal-servicio/personaldeservicio-alejandra-espindola.webp',
 };

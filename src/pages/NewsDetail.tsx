@@ -79,19 +79,19 @@ export default function NewsDetail() {
       
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 fade-in">
         <div className="flex items-center justify-between mb-4">
-          <Link to={backLink.path} className="text-[#2B6389] hover:underline font-medium">
-            ← Volver a {backLink.label}
+          <Link to="/" className="text-[#2B6389] hover:underline font-medium">
+            ← Volver a Inicio
           </Link>
           {backLink.path !== '/' && (
-            <Link to="/" className="text-[#2B6389] hover:underline font-medium">
-              Volver a Inicio →
+            <Link to={backLink.path} className="text-[#2B6389] hover:underline font-medium">
+              Volver a {backLink.label} →
             </Link>
           )}
         </div>
 
         <article className="bg-white rounded-lg shadow-lg overflow-hidden">
-          <div className="h-96">
-            <MediaCarousel media={article.media} alt={article.title} />
+          <div className="w-full bg-gray-100">
+            <MediaCarousel media={article.media} alt={article.title} contain />
           </div>
 
           <div className="p-4 sm:p-6 lg:p-8">
@@ -113,8 +113,8 @@ export default function NewsDetail() {
               {getFullDateWithRelative(article.date)}
             </time>
 
-            <div className="mt-6 sm:mt-8 text-gray-800 text-base sm:text-lg leading-relaxed whitespace-pre-wrap break-words">
-              <p>{article.content || article.summary}</p>
+            <div className="mt-6 sm:mt-8 text-gray-800 text-base sm:text-lg leading-relaxed prose max-w-none news-content">
+              <div dangerouslySetInnerHTML={{ __html: article.content || article.summary }} />
             </div>
           </div>
         </article>

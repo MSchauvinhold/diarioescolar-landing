@@ -1,11 +1,25 @@
 import { FlagBearersData } from '../types/flagBearers';
 
 export const flagBearers: FlagBearersData = {
-  year: 2024,
-  image: '/Abanderados.png',
-  bearers: [
-    { name: 'Lucia Romero', role: 'Abanderada' },
-    { name: 'Carla Ramirez', role: '1era Escolta' },
-    { name: 'Jesus Acosta', role: '2da Escolta' },
+  year: 2026,
+  flags: [
+    {
+      type: 'Nacional',
+      image: '/abanderados/abanderados-nacion.webp',
+      bearers: [
+        { name: 'Nombre 1', role: 'Abanderado/a' },
+        { name: 'Nombre 2', role: '1era Escolta' },
+        { name: 'Nombre 3', role: '2da Escolta' },
+      ],
+    },
+    {
+      type: 'Provincial',
+      image: '/abanderados/abanderados-provincia.webp',
+      bearers: [
+        { name: 'Nombre 1', role: 'Abanderado/a' },
+        { name: 'Nombre 2', role: '1era Escolta' },
+        { name: 'Nombre 3', role: '2da Escolta' },
+      ],
+    },
   ],
 };

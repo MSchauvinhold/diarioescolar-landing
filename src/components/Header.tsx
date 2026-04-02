@@ -26,7 +26,7 @@ export default function Header({ }: HeaderProps) {
   return (
     <header className="bg-white border-b-2 border-gray-900 sticky top-0 z-50 shadow-lg">
       <div className="px-4 flex items-center justify-between h-20">
-        <div className="flex items-center gap-3">
+        <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition">
           <img 
             src={escudo} 
             alt="Logo Institución" 
@@ -36,7 +36,7 @@ export default function Header({ }: HeaderProps) {
             <span className="hidden lg:inline text-lg font-bold text-gray-900">Escuela Nº 227 "Cnel Simeón Payba"</span>
             <span className="hidden md:inline lg:hidden text-base font-bold text-gray-900">Escuela Nº 227</span>
           </div>
-        </div>
+        </Link>
 
         <div className="flex flex-col items-center lg:hidden">
           <LiveClock />

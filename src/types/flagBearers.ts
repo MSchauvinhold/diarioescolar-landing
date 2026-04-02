@@ -3,8 +3,13 @@ export interface FlagBearer {
   role: string;
 }
 
-export interface FlagBearersData {
-  year: number;
+export interface FlagGroup {
+  type: 'Nacional' | 'Provincial';
   image: string;
   bearers: FlagBearer[];
+}
+
+export interface FlagBearersData {
+  year: number;
+  flags: FlagGroup[];
 }

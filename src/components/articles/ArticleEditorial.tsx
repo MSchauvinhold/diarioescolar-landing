@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { News } from '../../types/news';
 import MediaCarousel from '../MediaCarousel';
@@ -9,14 +10,18 @@ interface ArticleEditorialProps {
 
 export default function ArticleEditorial({ news }: ArticleEditorialProps) {
   const location = useLocation();
+  const [caption, setCaption] = useState<string | undefined>(news.media[0]?.caption);
   
   return (
     <Link to={`/noticia/${news.id}`} state={{ from: location.pathname }}>
       <article className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer h-full flex flex-col transform hover:-translate-y-1">
       <div className="h-64">
-        <MediaCarousel media={news.media} alt={news.title} />
+        <MediaCarousel media={news.media} alt={news.title} onCaptionChange={setCaption} />
       </div>
       <div className="p-6 flex-1 flex flex-col">
+        {caption && (
+          <p className="text-xs text-gray-400 italic mb-2">{caption}</p>
+        )}
         <span className="text-xs font-semibold text-[#2B6389] uppercase">
           {news.section}
         </span>

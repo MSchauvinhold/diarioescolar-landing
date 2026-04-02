@@ -1,5 +1,10 @@
+function parseLocalDate(dateString: string): Date {
+  const [year, month, day] = dateString.split('-').map(Number);
+  return new Date(year, month - 1, day);
+}
+
 export function getRelativeDate(dateString: string): string {
-  const date = new Date(dateString);
+  const date = parseLocalDate(dateString);
   const now = new Date();
   const diffMs = now.getTime() - date.getTime();
   const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
@@ -25,7 +30,7 @@ export function getRelativeDate(dateString: string): string {
 }
 
 export function getFullDateWithRelative(dateString: string): string {
-  const date = new Date(dateString);
+  const date = parseLocalDate(dateString);
   const now = new Date();
   const diffMs = now.getTime() - date.getTime();
   const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));

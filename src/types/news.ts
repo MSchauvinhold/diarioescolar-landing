@@ -9,6 +9,8 @@ export type MediaType = 'image' | 'video';
 export interface Media {
   type: MediaType;
   url: string;
+  caption?: string;
+  objectPosition?: string;
 }
 
 export interface News {

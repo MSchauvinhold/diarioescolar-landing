@@ -3,13 +3,13 @@ import { useState } from 'react';
 interface ImageTextBlockProps {
   image: string;
   title: string;
-  description: string;
+  role?: string;
 }
 
 export default function ImageTextBlock({
   image,
   title,
-  description,
+  role,
 }: ImageTextBlockProps) {
   const [imageLoaded, setImageLoaded] = useState(false);
 
@@ -32,8 +32,8 @@ export default function ImageTextBlock({
         />
       </div>
       <div>
-        <h3 className="text-2xl font-bold text-gray-800">{title}</h3>
-        <p className="mt-3 text-gray-600 leading-relaxed">{description}</p>
+        <p className="text-2xl font-bold text-[#2B6389] mb-1">{role}</p>
+        <h3 className="text-xl font-semibold text-gray-800">{title}</h3>
       </div>
     </div>
   );

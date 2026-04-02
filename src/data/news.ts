@@ -2,170 +2,144 @@ import { News } from '../types/news';
 
 export const news: News[] = [
   {
-    id: 13,
-    title: 'Celebración del 150º Aniversario de la Escuela Nº 227',
-    subtitle: 'Un siglo y medio de historia educativa en Paso de los Libres',
-    summary: 'La comunidad educativa celebró con gran emoción el 150º aniversario de la institución. El evento contó con la presencia de autoridades municipales, ex alumnos, docentes jubilados y cientos de familias que forman parte de la historia de nuestra querida escuela. Durante toda la jornada se realizaron actividades culturales, deportivas y artísticas que reflejaron el espíritu de comunidad que caracteriza a la Escuela Coronel Simeón Payba.',
-    content: `El pasado 1 de febrero de 2026, la Escuela Nº 227 "Coronel Simeón Payba" celebró su 150º aniversario con una jornada histórica que quedó grabada en el corazón de toda la comunidad educativa de Paso de los Libres. Desde las primeras horas de la mañana, el establecimiento se vistió de gala para recibir a cientos de personas que, a lo largo de décadas, han sido parte fundamental de esta institución que es orgullo de la ciudad.
+    id: 1,
+    title: 'Regreso a las aulas',
+    subtitle: 'La Escuela 227 dio inicio al Ciclo Lectivo',
+    summary: 'Con el Salón de Usos Múltiples (SUM) como punto de encuentro, la Escuela 227 "Cnel. Simeón Payba" dio la bienvenida oficial a sus estudiantes para el inicio de un nuevo año escolar.',
+    content: `<p>Con el Salón de Usos Múltiples (SUM) como punto de encuentro, la Escuela 227 "Cnel. Simeón Payba" dio la bienvenida oficial a sus estudiantes para el inicio de un nuevo año escolar. El acto de apertura marcó el reencuentro de la comunidad educativa, donde alumnos, docentes y familias renovaron el compromiso con la educación pública de nuestra ciudad.</p>
 
-La ceremonia oficial comenzó a las 9:00 horas con el izamiento de la bandera nacional a cargo de los abanderados de la escuela, acompañados por el coro de estudiantes que interpretó el Himno Nacional Argentino. La emoción se hizo presente cuando veteranos docentes, algunos con más de 40 años de servicio en la institución, se acercaron a saludar a ex alumnos que hoy son profesionales destacados en distintas áreas.
+<h3>Compromiso y comunidad</h3>
 
-La directora de la escuela, en su discurso inaugural, recordó los orígenes humildes de la institución en 1876, cuando un grupo de vecinos comprometidos con la educación decidió fundar una escuela que pudiera brindar oportunidades a todos los niños del barrio, sin distinción de origen social o económico. "Hoy, 150 años después, seguimos fieles a ese espíritu fundacional", afirmó con orgullo.
+<p>Durante la jornada, los estudiantes de los distintos turnos se formaron junto a sus maestras de grado para dar comienzo a las actividades. Más allá del protocolo, el inicio de clases representa el fortalecimiento del vínculo pedagógico que caracteriza a nuestra institución, enfocándonos en un año de aprendizaje continuo y desarrollo de valores.</p>
 
-Durante la mañana, se inauguró una muestra fotográfica que recorre la historia de la escuela a través de imágenes. Las fotografías, algunas de ellas en blanco y negro y cuidadosamente restauradas, muestran la evolución del edificio escolar, los cambios en los uniformes a lo largo de las décadas, y rostros de generaciones de estudiantes que pasaron por estas aulas. Muchos visitantes se emocionaron al reconocerse en las fotos antiguas o al encontrar imágenes de sus padres y abuelos.
+<h3>Un nuevo año de desafíos</h3>
 
-Uno de los momentos más emotivos de la jornada fue el homenaje a los docentes jubilados. Más de treinta maestros y profesores que dedicaron su vida a la educación en esta escuela fueron reconocidos con placas conmemorativas. Entre ellos, la señora María Elena González, quien se jubiló hace cinco años después de 42 años de servicio, compartió anécdotas que arrancaron risas y lágrimas entre los presentes. "Esta escuela es mi segunda casa, y estos niños, todos los que pasaron por mis manos, son como mis hijos", expresó visiblemente emocionada.
-
-El intendente municipal, presente en la celebración, anunció la firma de un convenio para la realización de obras de mejoramiento en el edificio escolar. Las obras incluirán la renovación completa de los baños, la instalación de aire acondicionado en todas las aulas, y la construcción de una nueva biblioteca que llevará el nombre del fundador de la escuela. "Es nuestro deber como gobierno municipal apoyar a las instituciones educativas que son pilares de nuestra comunidad", señaló el funcionario.
-
-Por la tarde, el patio de la escuela se transformó en un espacio de celebración popular. Los estudiantes de todos los grados presentaron números artísticos que incluyeron danzas folklóricas, obras de teatro, recitales de poesía y presentaciones musicales. El grupo de percusión de sexto grado sorprendió a todos con una interpretación de ritmos latinoamericanos que hizo bailar a grandes y chicos.
-
-La feria de ciencias y tecnología, montada especialmente para la ocasión, mostró los proyectos más destacados del año. Desde experimentos de física y química hasta robots construidos por los alumnos de secundaria, la muestra evidenció el compromiso de la escuela con la educación científica y tecnológica. Varios proyectos llamaron la atención de docentes de otras instituciones que se acercaron especialmente para conocer las iniciativas pedagógicas de la Escuela 227.
-
-El evento deportivo también tuvo su espacio destacado. Se organizaron partidos amistosos de fútbol, vóley y básquet entre equipos formados por ex alumnos de diferentes generaciones. Fue conmovedor ver a personas de 60 y 70 años compartiendo la cancha con jóvenes de 20, todos unidos por el amor a su escuela. El partido de fútbol entre "veteranos" y "jóvenes" terminó en un emotivo empate que fue celebrado con un abrazo colectivo.
-
-La jornada gastronómica estuvo a cargo de la cooperadora escolar, que preparó cientos de porciones de comidas típicas. Empanadas, locro, tortas fritas y mate cocido se compartieron en un ambiente de camaradería que reflejó el espíritu solidario que siempre ha caracterizado a esta comunidad educativa. Los fondos recaudados serán destinados a la compra de material didáctico y equipamiento para las aulas.
-
-Uno de los proyectos más ambiciosos presentados durante el aniversario fue el lanzamiento del "Archivo Histórico Digital de la Escuela 227". Un grupo de docentes y estudiantes de secundaria ha trabajado durante dos años en la digitalización de documentos históricos, actas, boletines y fotografías que ahora estarán disponibles en línea para investigadores, ex alumnos y cualquier persona interesada en conocer la historia de la institución.
-
-La celebración culminó al atardecer con un espectáculo de fuegos artificiales que iluminó el cielo de Paso de los Libres. Mientras las luces de colores estallaban sobre el edificio escolar, cientos de personas cantaron el himno de la escuela, una canción compuesta hace 50 años por un maestro de música y que se ha convertido en símbolo de identidad para toda la comunidad educativa.
-
-Este 150º aniversario no fue solo una celebración del pasado, sino también una renovación del compromiso con el futuro. La Escuela Nº 227 "Coronel Simeón Payba" continúa siendo un faro de educación, valores y oportunidades para las nuevas generaciones de Paso de los Libres, manteniendo vivo el sueño de aquellos visionarios que la fundaron hace siglo y medio.`,
+<p>Desde el equipo directivo y docente, se dio la bienvenida a los alumnos con el objetivo claro de potenciar la identidad local y el rendimiento académico desde el primer día. La escuela reafirma su rol como espacio de contención y crecimiento, donde cada jornada es una oportunidad para que los niños y niñas de nuestra comunidad construyan las bases de su futuro.</p>`,
     media: [
-      { type: 'image', url: 'https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=800' },
-      { type: 'image', url: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800' },
-      { type: 'image', url: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800' },
-      { type: 'image', url: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800' },
-      { type: 'image', url: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800' },
-      { type: 'image', url: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800' },
-      { type: 'image', url: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800' },
-      { type: 'image', url: 'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=800' },
-      { type: 'image', url: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800' },
-      { type: 'image', url: 'https://images.unsplash.com/photo-1588072432836-e10032774350?w=800' }
+      { type: 'image', url: '/noticias/institucional/noticia1/noticia1-regresoalasaulas.webp', caption: 'Alumnos y alumnas formados en el SUM de la institución durante el primer encuentro del ciclo lectivo, acompañados por sus maestras de grado.' },
+      { type: 'image', url: '/noticias/institucional/noticia1/noticia1-regresoalasaulas2.webp', caption: 'Vista general del acto de apertura del Ciclo Lectivo 2026, con la comunidad educativa reunida en el Salón de Usos Múltiples de la Escuela 227.' },
     ],
     section: 'institucional',
-    date: '2026-02-01',
-  },
-  {
-    id: 1,
-    title: 'Comenzo el ciclo lectivo 2026',
-    summary: 'La escuela dio inicio al nuevo ciclo lectivo con una ceremonia de bienvenida para todos los estudiantes y docentes.',
-    media: [
-      { type: 'image', url: 'https://i.imgur.com/mUPEfcY.jpeg' },
-      { type: 'image', url: 'https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=800' }
-    ],
-    section: 'pedagogico',
-    date: '2026-01-10',
+    date: '2026-03-09',
   },
   {
     id: 2,
-    title: 'Torneo intercolegial de futbol',
-    summary: 'Los alumnos participaron del torneo intercolegial obteniendo el segundo lugar en la categoria sub-15.',
+    title: 'Soberanía en las Aulas',
+    subtitle: 'Jornada de formación sobre la Batalla de San Joaquín',
+    summary: 'La Escuela 227 "Cnel. Simeón Payba" reafirma su compromiso con la identidad regional mediante el lanzamiento de un ciclo de capacitaciones específicas sobre la Batalla de San Joaquín, en articulación con la Escuela 477 "Mercedes Franco".',
+    content: `<p>La Escuela 227 "Cnel. Simeón Payba" reafirma su compromiso con la identidad regional mediante el lanzamiento de un ciclo de capacitaciones específicas sobre la Batalla de San Joaquín. Este primer encuentro, realizado en articulación con la Escuela 477 "Mercedes Franco", marca un precedente en el trabajo en red entre las instituciones educativas de nuestra ciudad.</p>
+
+<h3>Formación de alto nivel para el aula</h3>
+
+<p>La jornada no fue una charla informativa convencional, sino una instancia técnica diseñada para que los docentes cuenten con herramientas precisas al transmitir nuestra historia local. La disertación estuvo a cargo de especialistas del Grupo Ava Reta, representados por:</p>
+
+<ul>
+  <li><strong>Prof. Miguel Villalba:</strong> Autor del libro "La frontera en armas", quien además realizó una valiosa donación de ejemplares de su obra para enriquecer la biblioteca pedagógica de la institución.</li>
+  <li><strong>Sr. Dardo Montiel:</strong> Referente cultural de la zona, quien aportó el contexto necesario para entender la batalla no solo como un hecho bélico, sino como un pilar fundamental de nuestra soberanía.</li>
+</ul>
+
+<h3>Compromiso institucional y visión pedagógica</h3>
+
+<p>El encuentro contó con la participación especial de la <strong>Sra. Mabel Bonpland</strong> y la <strong>Prof. Yamila Ibarra</strong>, cuyas intervenciones subrayaron la importancia de que la historia de nuestras tierras deje de ser un dato anecdótico para convertirse en un contenido troncal en la formación de los estudiantes.</p>
+
+<p>El mensaje final de la jornada fue contundente: <strong>la soberanía se construye en el aula.</strong> El objetivo es claro: que este conocimiento no se quede en los libros, sino que llegue a las aulas. Si nuestros alumnos no conocen su pasado, difícilmente podrán ser dueños de su propio futuro.</p>`,
     media: [
-      { type: 'image', url: 'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=800' }
+      { type: 'image', url: '/noticias/pedagogico/noticia1/noticia1-soberaniaenlasaulas.webp',caption:'Cuerpo docente de las Escuelas 227 y 477 en pleno proceso de formación, analizando nuevas estrategias para llevar la historia regional al salón de clases.', objectPosition: '50% 60%' },
+      { type: 'image', url: '/noticias/pedagogico/noticia1/noticia1-soberaniaenlasaulas2.webp',caption:'Dardo Montiel (Grupo Ava Reta) durante la exposición técnica sobre el legado histórico y la defensa de nuestras fronteras.', objectPosition: '50% 10%' },
     ],
-    section: 'administrativo',
-    date: '2026-01-08',
+    section: 'pedagogico',
+    date: '2026-03-14',
   },
   {
     id: 3,
-    title: 'Nuevas instalaciones en la biblioteca',
-    summary: 'Se inauguraron las nuevas instalaciones de la biblioteca escolar con mas de 2000 libros disponibles.',
-    media: [
-      { type: 'image', url: 'https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=800' },
-      { type: 'image', url: 'https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=800' }
+    title: 'Memoria, Verdad y Justicia',
+    subtitle: 'Un compromiso democrático desde las aulas',
+    summary: 'La Escuela 227 "Cnel. Simeón Payba" llevó adelante el acto conmemorativo por el Día Nacional de la Memoria por la Verdad y la Justicia, reafirmando su compromiso con los Derechos Humanos y los pilares de nuestra democracia.',
+    content: `<p>La Escuela 227 "Cnel. Simeón Payba" llevó adelante el acto conmemorativo por el Día Nacional de la Memoria por la Verdad y la Justicia. Esta jornada no solo representa una fecha en el calendario escolar, sino un espacio fundamental de reflexión colectiva para fortalecer los pilares de nuestra democracia y el respeto irrenunciable por los Derechos Humanos.</p>
 
+<h3>Educar para la Libertad</h3>
+
+<p>El ejercicio de la memoria en el ámbito educativo es una herramienta indispensable para que las nuevas generaciones comprendan el valor de la libertad y el peso de nuestra historia reciente. Durante el acto, se enfatizó que la escuela es el escenario principal donde se construye ciudadanía; un lugar donde la búsqueda de la verdad y el pedido de justicia se transforman en valores vivos que guían el aprendizaje diario.</p>
+
+<p>A través de palabras alusivas y momentos de silencio respetuoso, la comunidad educativa reafirmó su compromiso de "Nunca Más" a la violencia institucional y al quiebre del orden democrático. Entendemos que una sociedad que recuerda es una sociedad que puede proyectar un futuro en paz y con pleno derecho.</p>
+
+<h3>El protagonismo de nuestros estudiantes</h3>
+
+<p>La participación de los alumnos en esta fecha es clave para transformar la teoría histórica en conciencia social. Mediante el análisis de lo sucedido y la expresión a través del arte y el debate, los estudiantes asumen un rol activo en la defensa de las instituciones. La educación, en este sentido, se convierte en el puente necesario para que el pasado nos enseñe a proteger el presente y a soñar un futuro donde la justicia sea la base de toda convivencia.</p>`,
+    media: [
+      { type: 'image', url: '/noticias/institucional/noticia2/noticia2-memoriaverdadyjusticia.webp',caption:'Cartelera temática donde se plasmaron las conclusiones y sentimientos sobre el 24 de marzo.' },
+      { type: 'image', url: '/noticias/institucional/noticia2/noticia2-memoriaverdadyjusticia2.webp',caption:'Abanderados de la Nación y de la Provincia (Turno Tarde), acompañados por su docente, portando con orgullo los símbolos patrios en una jornada de reflexión soberana.', objectPosition: '50% 20%' },
+      { type: 'image', url: '/noticias/institucional/noticia2/noticia2-memoriaverdadyjusticia3.webp',caption:'Estudiantes de nuestra institución participando activamente con un número alusivo, utilizando la expresión artística como vehículo para el mensaje de memoria', objectPosition: '50% 30%' },
     ],
     section: 'institucional',
-    date: '2026-01-12',
+    date: '2026-03-24',
   },
   {
     id: 4,
-    title: 'Jornada de limpieza comunitaria',
-    subtitle: 'Mas de 100 familias participaron',
-    summary: 'Familias y estudiantes participaron de la jornada de limpieza en el barrio, recolectando mas de 100kg de residuos. La actividad se realizo en el marco del programa de responsabilidad social de la institucion.',
+    title: 'Gestos que construyen comunidad',
+    subtitle: 'Donación para nuestra nueva Sala de Áreas Especiales',
+    summary: 'La Escuela 227 "Cnel. Simeón Payba" agradece a la familia de Rufina, alumna de 3er grado, por la generosa donación de almohadones destinados a la nueva Sala de Áreas Especiales de la institución.',
+    content: `<p>La Escuela 227 "Cnel. Simeón Payba" expresa su más profundo agradecimiento a la familia de nuestra alumna de 3er grado (Turno Tarde), Rufina, por la generosa donación de almohadones destinados a la Sala de Áreas Especiales de la institución. Este aporte llega en un momento sumamente especial, coincidiendo con el estreno de estos espacios pedagógicos durante el presente ciclo lectivo.</p>
+
+<h3>El valor de la comodidad en el aprendizaje</h3>
+
+<p>La música y las artes requieren un entorno que invite a la creación y la expresión. Gracias a este gesto, nuestros estudiantes contarán ahora con un espacio mucho más confortable para trabajar, permitiéndoles sentarse y disfrutar de sus clases de una manera más cercana y dinámica. Entendemos que el bienestar físico de los niños dentro del aula potencia directamente su capacidad de concentrarse y disfrutar del conocimiento.</p>
+
+<h3>La escuela la hacemos entre todos</h3>
+
+<p>Más allá de lo material, acciones como la de la familia de Rufina son el motor que impulsa a nuestra institución. Este es un ejemplo inspirador de compromiso y solidaridad, que nos recuerda que la escuela no es solo un edificio, sino una gran red de personas trabajando por un objetivo común: el crecimiento de nuestros chicos.</p>
+
+<p>Maravillosos gestos como este motivan a todo el cuerpo docente y directivo a seguir transformando nuestra institución en un segundo hogar. Cuando la familia y la escuela caminan juntas, el resultado es siempre una comunidad más fuerte y un futuro mejor para cada alumno. ¡Gracias, Rufi y familia!</p>`,
     media: [
-      { type: 'image', url: 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800' }
+      { type: 'image', url: '/noticias/comunidad/noticia1/noticia1-gestosqueconstruyencomunidad2.webp',caption:'Nuestra alumna Rufina junto a su mamá, acompañada por el Profesor de Música (Turno Mañana), la Vicedirectora (Turno Mañana) y la Directora de la Escuela 227, celebrando este valioso aporte a la comodidad de todos los estudiantes.', objectPosition: 'center' },
+      { type: 'image', url: '/noticias/comunidad/noticia1/noticia1-gestosqueconstruyencomunidad.webp',caption:'Manos a la obra: Rufina y su mamá en el momento de desembalar los almohadones donados, un gesto sencillo que representa el compromiso y el cariño de las familias hacia la nueva Sala de Áreas Especiales de la Escuela 227.', objectPosition: '50% 30%' },
     ],
     section: 'comunidad',
-    date: '2026-01-05',
+    date: '2026-03-28',
   },
   {
     id: 5,
-    title: 'Campeonato de ajedrez escolar',
-    summary: 'Se realizo el primer campeonato interno de ajedrez con la participacion de 40 estudiantes.',
+    title: 'Mujeres que inspiran',
+    subtitle: 'Reconocimiento a la trayectoria y el compromiso docente',
+    summary: 'La Escuela 227 "Cnel. Simeón Payba" participó del acto de reconocimiento a Mujeres Destacadas en la Plaza Independencia, donde fueron distinguidas las docentes Vanesa Lecce y Blanca Sotelo por su trayectoria y compromiso con la educación pública.',
+    content: `<p>En una jornada cargada de emotividad en la Plaza Independencia, la Escuela 227 "Cnel. Simeón Payba" participó del acto central de reconocimiento a Mujeres Destacadas, una iniciativa impulsada por el Municipio en el marco del Mes de la Mujer. El evento tuvo como objetivo visibilizar la labor de aquellas mujeres que, con su trabajo diario y dedicación, transforman la realidad de nuestras instituciones.</p>
+
+<h3>Un homenaje a la vocación educativa</h3>
+
+<p>Representando a nuestra institución, fueron distinguidas las docentes <strong>Vanesa Lecce</strong> y <strong>Blanca Sotelo</strong>, profesionales que encarnan los valores de compromiso, vocación y servicio que se promueven día a día. Este reconocimiento es una validación a la trayectoria de quienes sostienen la educación pública con esfuerzo, paciencia y una profunda calidez humana.</p>
+
+<p>La distinción fue entregada por el <strong>Intendente Municipal, Agustín Faraldo</strong>, junto a la <strong>Directora, Rosana Montiel</strong>, quien en representación de la escuela acompañó a las homenajeadas en este importante momento. El encuentro reunió a diversas instituciones de la ciudad para celebrar el cierre de las propuestas desarrolladas durante todo marzo, reafirmando el valor del trabajo docente.</p>
+
+<h3>Visibilizar para seguir construyendo</h3>
+
+<p>Desde la Escuela 227, reafirmamos la importancia de estos espacios de reconocimiento. La labor en el aula es el motor que impulsa el futuro de nuestros niños, y contar con referentes como la <strong>Seño Vanesa Lecce</strong> y la <strong>Seño Blanca Sotelo</strong> nos motiva a seguir trabajando por una educación de calidad. Sus trayectorias son un ejemplo de que el rol de la mujer en la educación es el pilar fundamental de nuestra comunidad educativa.</p>`,
     media: [
-      { type: 'image', url: 'https://images.unsplash.com/photo-1529699211952-734e80c4d42b?w=800' },
-      { type: 'image', url: 'https://images.unsplash.com/photo-1560174038-da43ac74f01b?w=800' }
+      { type: 'image', url: '/noticias/comunidad/noticia2/noticia2-mujeresqueinspiran.webp',caption:'Las docentes destacadas Vanesa Lecce y Blanca Sotelo, acompañadas por la Directora Rosana Montiel, durante el acto de reconocimiento a su labor en la Plaza Independencia.', objectPosition: '50% 45%' },
+      { type: 'image', url: '/noticias/comunidad/noticia2/noticia2-mujeresqueinspiran2.webp',caption:'Momento de la distinción: Captura del streaming oficial donde el Intendente Municipal, Agustín Faraldo, y la Directora participan de la entrega del reconocimiento a nuestras docentes por su trayectoria y compromiso social.' },
     ],
-    section: 'administrativo',
-    date: '2026-01-15',
+    section: 'comunidad',
+    date: '2026-03-30',
   },
   {
     id: 6,
-    title: 'Taller de robotica para secundaria',
-    summary: 'Comenzaron los talleres de robotica educativa para estudiantes de nivel secundario.',
+    title: 'Fe y comunidad',
+    subtitle: 'Participación de nuestra institución en el Vía Crucis interinstitucional',
+    summary: 'La Escuela 227 "Cnel. Simeón Payba" participó activamente del Vía Crucis organizado por el Colegio San José, representando La Última Cena en una jornada de reflexión y encuentro comunitario.',
+    content: `<p>En una jornada de profunda reflexión y encuentro, la Escuela 227 "Cnel. Simeón Payba" participó activamente del Vía Crucis organizado por el Colegio San José. El evento, que reunió a diversas instituciones educativas de la ciudad, se consolidó como un espacio de unión comunitaria y expresión de valores compartidos.</p>
+
+<h3>Un espacio de representación y respeto</h3>
+
+<p>Para la edición de este año, se asignaron estaciones específicas a cada una de las escuelas participantes. A nuestra institución le correspondió la representación de <strong>La Última Cena</strong>, una de las instancias más significativas del recorrido. Los docentes y alumnos trabajaron con dedicación en el armado y la ambientación de la estación, cuidando cada detalle para transmitir el mensaje de la fecha de manera respetuosa y pedagógica.</p>
+
+<h3>El protagonismo de nuestros alumnos</h3>
+
+<p>La participación de los niños fue el eje central de la jornada. A través de la personificación y el respeto durante el paso de las distintas estaciones, los alumnos pudieron vivenciar esta tradición fuera del aula, fortaleciendo los lazos con pares de otras instituciones y comprendiendo la importancia de la convivencia y la espiritualidad en nuestra cultura regional.</p>
+
+<p>Desde la Escuela 227, agradecemos la invitación y felicitamos a cada estudiante y familia que se sumó a esta propuesta, reafirmando que el trabajo conjunto entre las instituciones educativas enriquece la formación integral de nuestros niños.</p>`,
     media: [
-      { type: 'image', url: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800' }
+      { type: 'image', url: '/noticias/comunidad/noticia3/noticia3-feycomunidad.webp',caption: 'Representación de la estación de La Última Cena, a cargo de nuestra institución durante el recorrido del Vía Crucis.' },
     ],
-    section: 'pedagogico',
-    date: '2026-01-14',
-  },
-  {
-    id: 7,
-    title: 'Feria de ciencias 2026',
-    subtitle: 'Mas de 50 proyectos presentados',
-    summary: 'Los estudiantes presentaron sus proyectos de investigacion en la feria anual de ciencias. Se destacaron trabajos sobre energia renovable, medio ambiente y tecnologia.',
-    media: [
-      { type: 'image', url: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800' },
-      { type: 'image', url: 'https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=800' },
-      { type: 'image', url: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800' }
-    ],
-    section: 'pedagogico',
-    date: '2026-01-18',
-  },
-  {
-    id: 8,
-    title: 'Encuentro deportivo interescolar',
-    summary: 'Se realizo el encuentro deportivo con la participacion de 5 escuelas de la zona. Nuestros alumnos compitieron en atletismo, ciclismo y basquet.',
-    media: [
-      { type: 'image', url: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800' },
-      { type: 'image', url: 'https://images.unsplash.com/photo-1519766304817-4f37bda74a26?w=800' },
-      { type: 'image', url: 'https://images.unsplash.com/photo-1517649763962-0c623066013b?w=800' }
-    ],
-    section: 'administrativo',
-    date: '2026-01-17',
-  },
-  {
-    id: 9,
-    title: 'Acto del Día de la Bandera',
-    summary: 'Los estudiantes participaron del acto conmemorativo con presentaciones artísticas y palabras alusivas.',
-    media: [{ type: 'image', url: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800' }],
-    section: 'institucional',
-    date: '2025-12-20',
-  },
-  {
-    id: 10,
-    title: 'Maratón solidaria',
-    summary: 'Se realizó la maratón anual con participación de toda la comunidad educativa.',
-    media: [{ type: 'image', url: 'https://images.unsplash.com/photo-1452626038306-9aae5e071dd3?w=800' }],
-    section: 'administrativo',
-    date: '2025-12-15',
-  },
-  {
-    id: 11,
-    title: 'Taller de arte para padres',
-    summary: 'Familias participaron del taller de expresión artística junto a sus hijos.',
-    media: [{ type: 'image', url: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800' }],
     section: 'comunidad',
-    date: '2025-12-10',
+    date: '2026-03-31',
   },
-  {
-    id: 12,
-    title: 'Proyecto de huerta escolar',
-    summary: 'Los alumnos comenzaron el proyecto de huerta orgánica en el patio de la escuela.',
-    media: [{ type: 'image', url: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800' }],
-    section: 'pedagogico',
-    date: '2025-12-05',
-  },
-];
+]
