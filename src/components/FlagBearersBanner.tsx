@@ -10,23 +10,23 @@ export default function FlagBearersBanner() {
   const next = () => setCurrentIndex((i) => (i + 1) % flagBearers.flags.length);
 
   return (
-    <section className="relative w-full h-[750px] mb-12 rounded-lg overflow-hidden shadow-xl group">
+    <section className="relative w-full h-[400px] md:h-[750px] mb-12 rounded-lg overflow-hidden shadow-xl group bg-black" style={{ background: 'linear-gradient(to bottom, #191B1E 0%, #6b7280 100%)' }}>
       <img
         key={current.image}
         src={current.image}
         alt={`Abanderados ${current.type}`}
-        className="w-full h-full object-cover transition-opacity duration-500"
+        className="w-full h-full object-contain md:object-cover transition-opacity duration-500"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 md:via-black/40 to-transparent flex items-end">
-        <div className="w-full p-3 md:p-8 text-white">
-          <h2 className="text-base md:text-4xl font-bold mb-1 md:mb-4">
+      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 md:via-black/30 to-transparent flex items-end">
+        <div className="w-full p-4 md:p-8 text-white">
+          <h2 className="text-sm md:text-4xl font-bold mb-2 md:mb-4">
             ABANDERADOS {flagBearers.year} - BANDERA {current.type.toUpperCase()}
           </h2>
-          <div className="grid grid-cols-3 gap-1 md:gap-4">
+          <div className="grid grid-cols-3 gap-2 md:gap-4">
             {current.bearers.map((bearer, index) => (
-              <div key={index} className="bg-white/20 md:bg-white/10 backdrop-blur-sm rounded-lg p-1.5 md:p-4">
-                <p className="font-semibold text-xs md:text-lg">{bearer.name}</p>
-                <p className="text-xs md:text-sm text-gray-200">{bearer.role}</p>
+              <div key={index} className="bg-black/50 md:bg-white/10 backdrop-blur-sm rounded-lg p-2 md:p-4">
+                <p className="font-semibold text-[11px] leading-tight md:text-lg">{bearer.name}</p>
+                <p className="text-[10px] md:text-sm text-gray-300 mt-0.5">{bearer.role}</p>
               </div>
             ))}
           </div>

@@ -1,15 +1,9 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Section } from '../types/news';
 import escudo from '../assets/escudo.jpg';
 import LiveClock from './LiveClock';
 
-interface HeaderProps {
-  currentSection?: Section | null;
-  onSectionChange?: (section: Section | null) => void;
-}
-
-export default function Header({ }: HeaderProps) {
+export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const location = useLocation();

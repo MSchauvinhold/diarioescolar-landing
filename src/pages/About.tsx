@@ -6,7 +6,8 @@ import GroupPhotoSection from '../components/GroupPhotoSection';
 import FadeInSection from '../components/FadeInSection';
 import { aboutData } from '../data/about';
 import { directivos } from '../data/directivos';
-import { personalDocente, personalLimpieza } from '../data/personal';
+import { personalDocente, personalServicio } from '../data/personal';
+import ServiceStaffCard from '../components/ServiceStaffCard';
 import { usePageTitle } from '../hooks/usePageTitle';
 
 export default function About() {
@@ -82,9 +83,15 @@ export default function About() {
               <h1 className="text-3xl font-bold">Personal de Servicio</h1>
             </div>
           </FadeInSection>
-          <FadeInSection direction="up" delay={100}>
-            <GroupPhotoSection data={personalLimpieza} />
-          </FadeInSection>
+          <div className="max-w-2xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {personalServicio.map((staff, i) => (
+                <FadeInSection key={staff.id} direction="up" delay={i * 100}>
+                  <ServiceStaffCard staff={staff} />
+                </FadeInSection>
+              ))}
+            </div>
+          </div>
         </section>
       </main>
 
