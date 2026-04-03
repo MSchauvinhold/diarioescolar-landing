@@ -15,7 +15,7 @@ export default function ArticleHero({ news }: ArticleHeroProps) {
   return (
     <Link to={`/noticia/${news.id}`} state={{ from: location.pathname }}>
       <article className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer transform hover:-translate-y-1 max-w-8xl mx-auto">
-      <div className="h-[580px]">
+      <div className="h-48 sm:h-[580px] bg-gray-100">
         <MediaCarousel media={news.media} alt={news.title} onCaptionChange={setCaption} />
       </div>
       <div className="p-6">

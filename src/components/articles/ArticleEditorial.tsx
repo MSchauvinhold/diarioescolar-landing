@@ -15,7 +15,7 @@ export default function ArticleEditorial({ news }: ArticleEditorialProps) {
   return (
     <Link to={`/noticia/${news.id}`} state={{ from: location.pathname }}>
       <article className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer h-full flex flex-col transform hover:-translate-y-1">
-      <div className="h-64">
+      <div className="h-48 sm:h-64 bg-gray-100">
         <MediaCarousel media={news.media} alt={news.title} onCaptionChange={setCaption} />
       </div>
       <div className="p-6 flex-1 flex flex-col">

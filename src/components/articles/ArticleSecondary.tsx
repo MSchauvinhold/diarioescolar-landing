@@ -15,7 +15,7 @@ export default function ArticleSecondary({ news }: ArticleSecondaryProps) {
   return (
     <Link to={`/noticia/${news.id}`} state={{ from: location.pathname }}>
       <article className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer h-full flex flex-col transform hover:-translate-y-1">
-      <div className="h-80">
+      <div className="h-48 sm:h-80 bg-gray-100">
         <MediaCarousel media={news.media} alt={news.title} onCaptionChange={setCaption} />
       </div>
       <div className="p-4 flex-1 flex flex-col">

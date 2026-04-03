@@ -1,39 +1,31 @@
 import { useState } from 'react';
+import { Authority } from '../types/authority';
 
 interface ImageTextBlockProps {
-  image: string;
-  title: string;
-  role?: string;
+  authority: Authority;
+  imageRight?: boolean;
 }
 
-export default function ImageTextBlock({
-  image,
-  title,
-  role,
-}: ImageTextBlockProps) {
+export default function ImageTextBlock({ authority, imageRight = false }: ImageTextBlockProps) {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
-    <div className="bg-white rounded-xl shadow-lg p-8 grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-8 items-center max-w-6xl mx-auto">
-      <div className="relative">
-        {!imageLoaded && (
-          <div className="w-full h-[360px] bg-gray-200 rounded-lg animate-pulse flex items-center justify-center">
-            <div className="text-gray-400">Cargando...</div>
-          </div>
-        )}
-        <img
-          src={image}
-          alt={title}
-          className={`w-full h-[360px] object-cover rounded-lg transition-opacity duration-300 ${
-            imageLoaded ? 'opacity-100' : 'opacity-0 absolute top-0'
-          }`}
-          loading="lazy"
-          onLoad={() => setImageLoaded(true)}
-        />
-      </div>
-      <div>
-        <p className="text-2xl font-bold text-[#2B6389] mb-1">{role}</p>
-        <h3 className="text-xl font-semibold text-gray-800">{title}</h3>
+    <div className="bg-white rounded-xl shadow-md overflow-hidden max-w-4xl mx-auto">
+      <div className={`flex flex-col ${imageRight ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
+        <div className="relative w-full md:w-72 h-72 flex-shrink-0 bg-gray-100">
+          {!imageLoaded && <div className="absolute inset-0 bg-gray-200 animate-pulse" />}
+          <img
+            src={authority.image}
+            alt={authority.name}
+            className={`w-full h-full object-cover transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+            loading="lazy"
+            onLoad={() => setImageLoaded(true)}
+          />
+        </div>
+        <div className={`flex flex-col justify-center p-8 border-l-4 border-[#2B6389]`}>
+          <p className="text-base font-semibold uppercase tracking-widest text-[#2B6389] mb-2">{authority.role}</p>
+          <h3 className="text-3xl font-bold text-gray-800">{authority.name}</h3>
+        </div>
       </div>
     </div>
   );

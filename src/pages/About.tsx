@@ -49,22 +49,16 @@ export default function About() {
         </section>
 
         {/* Sección Autoridades */}
-        <section id="directivos" className="w-full bg-gray-50 py-12">
+        <section id="directivos" className="w-full bg-gray-100 py-12">
           <FadeInSection direction="up">
-            <div className="w-full bg-[#2B6389] text-white py-5 text-center mb-0">
+            <div className="w-full bg-[#2B6389] text-white py-5 text-center mb-8">
               <h1 className="text-3xl font-bold">Autoridades</h1>
             </div>
           </FadeInSection>
-          <div className="px-4">
+          <div className="max-w-4xl mx-auto px-4 space-y-6">
             {directivos.map((directivo, i) => (
               <FadeInSection key={directivo.id} direction={i % 2 === 0 ? 'left' : 'right'} delay={0}>
-                <div className="mb-12">
-                  <ImageTextBlock
-                    image={directivo.image}
-                    title={directivo.name}
-                    role={directivo.role}
-                  />
-                </div>
+                <ImageTextBlock authority={directivo} imageRight={false} />
               </FadeInSection>
             ))}
           </div>

@@ -10,12 +10,12 @@ export default function FlagBearersBanner() {
   const next = () => setCurrentIndex((i) => (i + 1) % flagBearers.flags.length);
 
   return (
-    <section className="relative w-full h-auto md:h-[750px] mb-12 rounded-lg overflow-hidden shadow-xl group">
+    <section className="relative w-full h-[750px] mb-12 rounded-lg overflow-hidden shadow-xl group">
       <img
         key={current.image}
         src={current.image}
         alt={`Abanderados ${current.type}`}
-        className="w-full h-auto md:h-full object-contain md:object-cover transition-opacity duration-500"
+        className="w-full h-full object-cover transition-opacity duration-500"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 md:via-black/40 to-transparent flex items-end">
         <div className="w-full p-3 md:p-8 text-white">

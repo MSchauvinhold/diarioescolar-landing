@@ -57,8 +57,8 @@ export default function MediaCarousel({ media, alt, onCaptionChange, contain = f
           src={current.url} 
           alt={alt} 
           loading="lazy"
-          className={`w-full transition-opacity duration-300 ${contain ? 'h-auto block' : 'h-full object-cover'}`}
-          style={{ opacity: isLoading ? 0 : 1, objectPosition: current.objectPosition ?? 'top' }}
+          className={`w-full transition-opacity duration-300 ${contain ? 'h-auto block' : 'h-full object-contain'}`}
+          style={{ opacity: isLoading ? 0 : 1 }}
           onLoad={() => setIsLoading(false)}
         />
       ) : (
