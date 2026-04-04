@@ -59,7 +59,7 @@ export default function About() {
           <div className="max-w-4xl mx-auto px-4 space-y-6">
             {directivos.map((directivo, i) => (
               <FadeInSection key={directivo.id} direction={i % 2 === 0 ? 'left' : 'right'} delay={0}>
-                <ImageTextBlock authority={directivo} imageRight={false} />
+                <ImageTextBlock authority={directivo} imageRight={false} objectPosition={directivo.id === 1 || directivo.id === 2 ? '50% 70%' : 'center'} />
               </FadeInSection>
             ))}
           </div>

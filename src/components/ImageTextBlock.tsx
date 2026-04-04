@@ -4,20 +4,22 @@ import { Authority } from '../types/authority';
 interface ImageTextBlockProps {
   authority: Authority;
   imageRight?: boolean;
+  objectPosition?: string;
 }
 
-export default function ImageTextBlock({ authority, imageRight = false }: ImageTextBlockProps) {
+export default function ImageTextBlock({ authority, imageRight = false, objectPosition = 'center' }: ImageTextBlockProps) {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
     <div className="bg-white rounded-xl shadow-md overflow-hidden max-w-4xl mx-auto">
       <div className={`flex flex-col ${imageRight ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
-        <div className="relative w-full md:w-72 h-72 flex-shrink-0 bg-gray-100">
+        <div className="relative w-full md:w-72 h-96 md:h-72 flex-shrink-0 bg-gray-100">
           {!imageLoaded && <div className="absolute inset-0 bg-gray-200 animate-pulse" />}
           <img
             src={authority.image}
             alt={authority.name}
             className={`w-full h-full object-cover transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+            style={{ objectPosition }}
             loading="lazy"
             onLoad={() => setImageLoaded(true)}
           />
