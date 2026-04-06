@@ -23,5 +23,6 @@ export const personalServicio: ServiceStaff[] = [
   {
     id: 2,
     name: 'Fabián Ortiz',
+    image:'/quienes-somos/personal-servicio/personaldeservicio-fabian-ortiz.webp',
   },
 ];
