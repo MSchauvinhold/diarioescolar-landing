@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://simeonpayba227.com.ar/sitemap.xml
