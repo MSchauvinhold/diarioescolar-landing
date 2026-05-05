@@ -142,4 +142,102 @@ export const news: News[] = [
     section: 'comunidad',
     date: '2026-03-31',
   },
+  {
+    id: 7,
+    title: 'Soberanía, Memoria y Educación',
+    subtitle: 'Sentido homenaje a nuestros Héroes de Malvinas',
+    summary: 'En una jornada marcada por el respeto y la emoción, la comunidad educativa de la Escuela 227 conmemoró el Día del Veterano y de los Caídos en la Guerra de Malvinas, reafirmando el compromiso con la causa nacional a través del testimonio directo de sus protagonistas.',
+    content: `<p>En una jornada marcada por el respeto y la emoción, la comunidad educativa de la Escuela 227 conmemoró el Día del Veterano y de los Caídos en la Guerra de Malvinas, reafirmando el compromiso con la causa nacional a través del testimonio directo de sus protagonistas.</p>
+
+<p>La Escuela 227 no solo recordó una fecha del calendario escolar; vivió un encuentro con la historia viva. El acto central por el 2 de abril contó con la presencia estelar de los Veteranos de Guerra, quienes además de ser los padrinos de nuestra institución, representan el pilar fundamental sobre el cual construimos identidad y sentido de pertenencia en nuestros alumnos.</p>
+
+<p>Durante la ceremonia, el silencio respetuoso de los estudiantes fue el marco para las palabras de quienes defendieron nuestra soberanía en las islas. Desde la gestión institucional, entendemos que la educación es la herramienta más poderosa para mantener vigente el reclamo legítimo y el honor a los caídos.</p>
+
+<p>"Ver a nuestros alumnos escuchar el testimonio de quienes dieron todo por la patria es el mayor acto pedagógico que podemos ofrecer", destacaron las autoridades durante el cierre de una jornada que quedará grabada en el corazón de la escuela.</p>`,
+    media: [
+      { type: 'image', url: '/noticias/institucional/noticia3/1-1.jpeg' },
+      { type: 'image', url: '/noticias/institucional/noticia3/1-2.jpeg' },
+      { type: 'image', url: '/noticias/institucional/noticia3/1-3.jpeg' },
+      { type: 'image', url: '/noticias/institucional/noticia3/1-4.jpeg' },
+      { type: 'image', url: '/noticias/institucional/noticia3/1-5.jpeg' },
+    ],
+    section: 'institucional',
+    date: '2026-04-02',
+  },
+  {
+    id: 8,
+    title: 'Nuestra institución celebró un nuevo aniversario en una jornada cargada de alegría y color',
+    summary: 'La comunidad educativa de la Escuela 227 "Cnel. Simeón Payba" se vistió de fiesta para conmemorar un nuevo aniversario de su fundación, en una jornada de encuentro, celebración y sano esparcimiento.',
+    content: `<p>La comunidad educativa de la Escuela 227 "Cnel. Simeón Payba" se vistió de fiesta para conmemorar un nuevo aniversario de su fundación. En una jornada que quedará grabada en el recuerdo de los presentes, el establecimiento transformó su rutina habitual en un espacio de encuentro, celebración y sano esparcimiento, reafirmando los lazos que unen a la institución con las familias de nuestra ciudad.</p>
+
+<p>El festejo contó con la participación entusiasta de los alumnos, quienes junto a sus maestras y los profesores de áreas especiales, protagonizaron una mañana vibrante. El patio escolar fue el escenario principal donde la música y el baile marcaron el ritmo de la celebración, permitiendo que niños y docentes compartieran momentos de distensión fuera de las aulas. A través de coreografías y dinámicas grupales, se vivió un clima de verdadera camaradería que refleja el espíritu integrador de la escuela.</p>
+
+<p>La jornada no se limitó únicamente al baile, ya que los juegos recreativos y de competencia amistosa ocuparon un lugar central, incentivando el compañerismo y la destreza física de los estudiantes. Uno de los momentos más esperados fue el de los sorteos, donde la expectativa y la emoción de los pequeños coronaron un evento diseñado para agasajar a quienes dan vida diaria a la institución.</p>
+
+<p>Con este cierre festivo, la Escuela "Simeón Payba" no solo celebra su trayectoria histórica en Paso de los Libres, sino que renueva su compromiso con una educación que valora la alegría y el sentido de pertenencia como pilares fundamentales en el desarrollo de sus alumnos.</p>`,
+    media: [
+      { type: 'image', url: '/noticias/institucional/noticia4/2-1.jpeg' },
+      { type: 'image', url: '/noticias/institucional/noticia4/2-2.jpeg' },
+      { type: 'image', url: '/noticias/institucional/noticia4/2-3.jpeg' },
+    ],
+    section: 'institucional',
+    date: '2026-04-17',
+  },
+  {
+    id: 9,
+    title: 'Finalización de la capacitación sobre la Batalla de San Joaquín',
+    subtitle: 'Un cierre estratégico para la historia local',
+    summary: 'Concluyó exitosamente el segundo y último encuentro de la capacitación sobre la Batalla de San Joaquín, reafirmando el vínculo de colaboración entre la Escuela 227 y la Escuela 477.',
+    content: `<p>En una jornada marcada por el compromiso con la identidad regional, concluyó exitosamente el segundo y último encuentro de la capacitación sobre la Batalla de San Joaquín, reafirmando el vínculo de colaboración entre nuestra institución y la Escuela 477.</p>
+
+<p>Este ciclo de formación, que ya había tenido un exitoso primer capítulo, se consolidó en esta etapa final como un espacio clave para profundizar en el análisis de los hechos históricos que definieron nuestro territorio. La capacitación estuvo nuevamente a cargo de los especialistas del grupo <strong>Ava Retá</strong>, quienes aportaron su experiencia y rigor documental para desglosar las tácticas, el contexto social y el legado de este enfrentamiento.</p>
+
+<p>Durante el desarrollo de la sesión, los equipos docentes de ambas instituciones trabajaron de manera conjunta, transformando la información técnica en herramientas didácticas aplicables al aula, con el objetivo de que los estudiantes no solo memoricen fechas, sino que comprendan la relevancia estratégica de San Joaquín.</p>
+
+<p>Con la culminación de estos encuentros, se cierra una etapa de aprendizaje intensivo que fortalece la red educativa local y asegura que el conocimiento histórico se transmita de forma precisa y profesional, dejando sentada una base sólida para futuras investigaciones y proyectos institucionales compartidos entre ambas escuelas.</p>`,
+    media: [
+      { type: 'image', url: '/noticias/institucional/noticia5/3-1.jpeg' },
+      { type: 'image', url: '/noticias/institucional/noticia5/3-2.jpeg' },
+      { type: 'image', url: '/noticias/institucional/noticia5/3-3.jpeg' },
+      { type: 'image', url: '/noticias/institucional/noticia5/3-4.jpeg' },
+      { type: 'image', url: '/noticias/institucional/noticia5/3-5.jpeg' },
+      { type: 'image', url: '/noticias/institucional/noticia5/3-6.jpeg' },
+    ],
+    section: 'institucional',
+    date: '2026-04-11',
+  },
+  {
+    id: 10,
+    title: 'Innovación educativa',
+    subtitle: 'La institución incorpora nuevas herramientas digitales para fortalecer la alfabetización',
+    summary: 'La escuela ha dado un paso decisivo en la modernización de sus prácticas pedagógicas mediante la implementación de Scratch Day, tablets y el programa ACOMPAÑAR para potenciar los procesos de alfabetización.',
+    content: `<p>La escuela ha dado un paso decisivo en la modernización de sus prácticas pedagógicas mediante la implementación estratégica de recursos tecnológicos destinados a potenciar los procesos de alfabetización. A través del programa <strong>Scratch Day</strong> y el uso intensivo de tablets en el aula, los estudiantes acceden a nuevas formas de aprendizaje que integran el pensamiento computacional y la interactividad desde etapas tempranas. Esta adopción tecnológica no solo moderniza el soporte didáctico, sino que transforma la dinámica de enseñanza al ofrecer herramientas visuales y prácticas que facilitan la adquisición de competencias fundamentales.</p>
+
+<p>En sintonía con este avance, la institución se ha integrado oficialmente al nuevo programa <strong>"ACOMPAÑAR"</strong>, una plataforma digital diseñada específicamente para el intercambio profesional entre educadores. Este entorno virtual permite a los docentes compartir sus experiencias áulicas y socializar proyectos exitosos, nutriéndose de una serie de tutoriales especializados brindados por el programa. La participación en esta red de colaboración asegura que el uso de las tablets y el software educativo no sea un hecho aislado, sino una estrategia planificada y respaldada por una formación continua.</p>
+
+<p>Con la unión de estas herramientas técnicas y el soporte pedagógico de <strong>"ACOMPAÑAR"</strong>, la escuela reafirma su compromiso de elevar el nivel académico y profesional, asegurando que tanto alumnos como docentes cuenten con los recursos necesarios para enfrentar los desafíos de la educación digital actual.</p>`,
+    media: [
+      { type: 'image', url: '/noticias/pedagogico/noticia2/4-1.jpeg' },
+      { type: 'image', url: '/noticias/pedagogico/noticia2/4-2.jpeg' },
+      { type: 'image', url: '/noticias/pedagogico/noticia2/4-3.jpeg' },
+    ],
+    section: 'pedagogico',
+    date: '2026-04-08',
+  },
+  {
+    id: 11,
+    title: 'La Cooperadora Escolar realizó el sorteo del Bono Contribución en agradecimiento al apoyo de las familias',
+    summary: 'Se llevó a cabo con éxito el esperado sorteo del Bono Contribución organizado por la Cooperadora Escolar, reafirmando el vínculo entre la institución y su comunidad.',
+    content: `<p>Se llevó a cabo con éxito el esperado sorteo del Bono Contribución organizado por la Cooperadora Escolar, una instancia que año tras año refleja el fuerte vínculo entre la institución y su comunidad. Queremos felicitar formalmente a los ganadores de esta edición y, fundamentalmente, expresar nuestro más sincero reconocimiento a todos los que colaboraron adquiriendo su número.</p>
+
+<p>Este gesto de apoyo constante es lo que permite que la escuela siga transformando esos aportes en mejoras concretas para el día a día de nuestros alumnos. La participación de cada familia no solo representa una ayuda material, sino que confirma el compromiso compartido de ver crecer nuestro espacio educativo.</p>
+
+<p>Gracias por estar presentes, por colaborar siempre y por hacer posible que sigamos avanzando con proyectos que benefician a todos los estudiantes del establecimiento.</p>`,
+    media: [
+      { type: 'image', url: '/noticias/comunidad/noticia4/5-1.jpeg' },
+      { type: 'image', url: '/noticias/comunidad/noticia4/5-2.jpeg' },
+    ],
+    section: 'comunidad',
+    date: '2026-04-23',
+  },
 ]
